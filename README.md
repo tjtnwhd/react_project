@@ -1,6 +1,6 @@
-# 설정
+## 설정
 
-## .prettierrc 설정
+# .prettierrc 설정
 
 ```json
 {
@@ -23,7 +23,7 @@
 - @loadable/component : 지연로딩
 - react-helmet-async : head 태그 내의 특정태그의 내용을 변경시
 
-## 의존성 설치
+# 의존성 설치
 
 ```s
 yarn add react-router-dom sass styled-components classnames immer react-icons @loadable/component
@@ -47,7 +47,7 @@ root.render(
 );
 ````
 
-## 사용법
+# 사용법
 
 ```jsx
 import { Helmet } from 'react-helmet-async';
@@ -64,7 +64,7 @@ const App = () => {
 export default App;
 ```
 
-## 메세지, 다국어 처리
+# 메세지, 다국어 처리
 
 > 의존성
 
@@ -152,3 +152,16 @@ const App = () => {
 
 export default App;
 ```
+
+## 레이아웃 구성 (분리해서 파일 관리)
+
+- src/layouts/MainLayout.js
+- src/outlines/Header.js
+- src/outlines/Footer.js
+
+# 라우팅 구성
+
+## 회원
+
+- /member/join : 회원가입
+- /member/login : 로그인
