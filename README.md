@@ -161,7 +161,24 @@ export default App;
 
 # 라우팅 구성
 
+## 설정
+ - src/index.js : BrowserRouter 컴포넨트로 감싸기
+
+ ## 메인 페이지
+
+  - /
+
 ## 회원
 
 - /member/join : 회원가입
 - /member/login : 로그인
+
+
+# 없는 페이지
+ - * : 없는 페이지 - commons/pages/NotFound.js
+
+ ## 에러 페이지
+> class형 컴포넌트 - componentDidCatch
+ 
+ - commons/pages/Error.js
+ - commons/components/ErrorDisplay.js
