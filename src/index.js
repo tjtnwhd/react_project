@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import ErrorPage from './commons/pages/Error';
+
 import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,9 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
-import fontSize from '../styles/fontSize';
+
+import { FaSearch } from 'react-icons/fa';
+
+import fontSize from '../styles/FontSize';
+import { color } from '../styles/Color';
+import logo from '../images/logo.png';
+
+const { primary, dark, light } = color;
 
 const HeaderBox = styled.header`
   .site-top {
@@ -19,6 +26,33 @@ const HeaderBox = styled.header`
         line-height: 34px;
         margin-left: 10px;
         font-size: ${fontSize.normal};
+
+        &.on {
+          color: ${primary};
+        }
+      }
+    }
+  }
+
+  .logo-search {
+    div {
+      display: flex;
+      justify-content: space-between;
+      height: 150px;
+      align-items: center;
+
+      form {
+        display: flex;
+        height: 45px;
+        width: 380px;
+
+        button {
+          width: 45px;
+        }
+
+        input[type='text'] {
+          flex-grow: 1;
+        }
       }
     }
   }
@@ -37,7 +71,26 @@ const Header = () => {
           >
             {t('회원가입')}
           </NavLink>
-          <NavLink to="/member/login">{t('로그인')}</NavLink>
+          <NavLink
+            to="/member/login"
+            className={({ isActive }) => classNames({ on: isActive })}
+          >
+            {t('로그인')}
+          </NavLink>
+        </div>
+      </section>
+      <section className="logo-search">
+        <div className="layout-width">
+          <Link to="/">
+            <img src={logo} alt={t('로고')} />
+          </Link>
+
+          <form autoComplete="off">
+            <input type="text" />
+            <button type="submit">
+              <FaSearch />
+            </button>
+          </form>
         </div>
       </section>
     </HeaderBox>
