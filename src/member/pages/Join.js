@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import JoinContainer from '../containers/JoinContainer';
 import { useTranslation } from 'react-i18next';
+import JoinContainer from '../containers/JoinContainer';
 import { OuterBox } from '../../commons/components/LayoutBox';
 import { MainTitle } from '../../commons/components/TitleBox';
-
 
 const Join = () => {
   const { t } = useTranslation();
