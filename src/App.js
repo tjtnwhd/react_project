@@ -39,7 +39,7 @@ const App = () => {
         <Route path="news">
           <Route path=":category?" element={<News />} />
         </Route>
-        <Route path="*" element={<NotFound />} /> {/* 없는 페이지 */}
+        <Route path="*" element={<NotFound />} /> {/* 없는 페이11지 */}
       </Route>
     </Routes>
   );
